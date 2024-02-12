@@ -2,8 +2,9 @@ const { test, expect } = require('@playwright/test');
 import { ContactPage } from '../pageObject/contactPage';
 import { LoginPage } from '../pageObject/loginPage';
 import dotenv from 'dotenv';
+
 dotenv.config({
-    path: '.env.credentials',
+    path: 'ressources\\.env.credentials',
     override: true
 })
 
@@ -31,8 +32,8 @@ test('Submit Contact message - Logged in user', async ({ page }) => {
     await expect(contactPO.successContact_message).toBeVisible();
 
 });
-//Contact - No Data
-test('test', async ({ page }) => {
+
+test('Contact - No Data', async ({ page }) => {
     await contactPO.contactSubmit_button.dblclick();
     await expect(contactPO.fistnameContact_errorMessage).toBeVisible();
     await expect(contactPO.lastnameContact_errorMessage).toBeVisible();

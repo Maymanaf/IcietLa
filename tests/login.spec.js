@@ -4,11 +4,11 @@ import dotenv from 'dotenv';
 // Load environment variables from .env file
 
 dotenv.config({
-  path: '.env.credentials',
+  path: 'ressources\\.env.credentials',
   override: true
 })
 
-let loginPO; 
+let loginPO;
 test.beforeEach(async ({ page }) => {
   await page.goto('/');
   loginPO = new LoginPage(page);
