@@ -11,7 +11,8 @@
     "@playwright/test": "^1.41.2",
     "@types/node": "^20.11.16",
     "allure-commandline": "^2.27.0",
-    "allure-playwright": "^2.12.0"
+    "allure-playwright": "^2.12.0",
+    "gh-pages": "^6.1.1"
   },
   "dependencies": {
     "dotenv": "^16.4.1"
