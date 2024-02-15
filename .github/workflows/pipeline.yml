@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: 20.*
         if: always()
-      - run: docker build . --file Dockerfile.focal -t plimage
+      - run: docker build . --file Dockerfile -t plimage
       - run: docker run -d --name plcontainer plimage
       - run: sudo docker cp plcontainer:./tests/allure-results allure-results
       - uses: actions/upload-artifact@master
