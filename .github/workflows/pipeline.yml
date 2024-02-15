@@ -1,56 +1,40 @@
 name: Playwright Tests
-
 on:
   push:
-    branches: [master]
-
+    branches: [ master ]
 jobs:
   npm-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
           node-version: 20.*
-
-      - name: Build Docker image
-        run: docker build . --file Dockerfile -t plimage
-
-      - name: Run Docker container
-        run: docker run -d --name plcontainer plimage
-
-      - name: Copy allure-results from container
-        run: docker cp plcontainer:./tests/allure-results allure-results
-       
-      - name: Upload allure-results artifact
-        uses: actions/upload-artifact@v2
+        if: always()
+      - run: docker build . --file Dockerfile.focal -t plimage
+      - run: docker run -d --name plcontainer plimage
+      - run: sudo docker cp plcontainer:./tests/allure-results allure-results
+      - uses: actions/upload-artifact@master
         with:
           name: allure-results
           path: allure-results
-
-      - name: Checkout gh-pages branch
+      - uses: actions/checkout@v2
         if: always()
         continue-on-error: true
-        uses: actions/checkout@v2
         with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Generate Allure report
+          ref: gh-pages 
+          path: gh-pages   
+      - uses: simple-elf/allure-report-action@master
         if: always()
-        uses: simple-elf/allure-report-action@master
+        id: allure-report
         with:
-          allure_results: allure-results
-          gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
-
-      - name: Deploy to GitHub Pages
+           allure_results: allure-results
+           gh_pages: gh-pages
+           allure_report: allure-report
+           allure_history: allure-history
+      - uses: peaceiris/actions-gh-pages@v2
         if: always()
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: allure-history
+        env:
+           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           PUBLISH_BRANCH: gh-pages
+           PUBLISH_DIR: allure-history
