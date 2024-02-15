@@ -22,19 +22,19 @@ jobs:
         if: always()
         continue-on-error: true
         with:
-          ref: gh-pages 
-          path: gh-pages   
+          ref: abn-pages 
+          path: abn-pages   
       - uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
            allure_results: allure-results
-           gh_pages: gh-pages
+           gh_pages: abn-pages
            allure_report: allure-report
            allure_history: allure-history
-      - uses: peaceiris/actions-gh-pages@v2
+      - uses: peaceiris/actions-abn-pages@v2
         if: always()
         env:
            PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-           PUBLISH_BRANCH: gh-pages
+           PUBLISH_BRANCH: abn-pages
            PUBLISH_DIR: allure-history
