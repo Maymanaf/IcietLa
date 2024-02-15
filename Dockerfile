@@ -5,6 +5,7 @@ FROM mcr.microsoft.com/playwright:v1.41.1-jammy
 USER root
 # Create a directory for tests
 RUN mkdir /tests
+COPY . /tests
 # Set the working directory to /tests
 WORKDIR /tests
 # Copy package.json and package-lock.json
