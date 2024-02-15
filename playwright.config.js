@@ -23,17 +23,15 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [['html', {
-    outputFile: './test-results/report.html',
-    open: 'never'
-  }],
-  ['./reporter.js'], ["allure-playwright"]
+  reporter: [['html', { open: 'never' }],
+  ["allure-playwright"],
+    // ['./reporter.js']
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://front.icietla.staging.fides.io/',
-    headless:true,
+    headless: true,
     screenshot: 'only-on-failure',
     launchOptions: {
       //args: ["--start-maximized"],
