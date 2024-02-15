@@ -11,6 +11,7 @@ require('dotenv').config();
  */
 module.exports = defineConfig({
   testDir: './tests',
+  testMatch: '**spec.js',
   // Folder for test artifacts such as screenshots, videos, traces, etc.
   outputDir: 'test-results',
   /* Run tests in files in parallel */
@@ -22,15 +23,18 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: [
-    ['html'],
-    ['./reporter.js']
+  reporter: [['html', {
+    outputFile: './test-results/report.html',
+    open: 'never'
+  }],
+  ['./reporter.js'], ["allure-playwright"]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://front.icietla.staging.fides.io/',
     colorScheme: 'dark',
+    headless:true,
     screenshot: 'only-on-failure',
     launchOptions: {
       //args: ["--start-maximized"],
