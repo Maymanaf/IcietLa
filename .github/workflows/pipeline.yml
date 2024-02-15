@@ -22,8 +22,8 @@ jobs:
       - name: Run Docker container
         run: docker run -d --name plcontainer plimage
 
-      - name: Copy allure-results from container
-        run: docker cp plcontainer:/tests/allure-results .
+      #- name: Copy allure-results from container
+        #run: docker cp plcontainer:/tests/allure-results .
         # Assuming 'sudo' is not required since GitHub Actions runners usually have the necessary permissions
 
       - name: Upload allure-results artifact
