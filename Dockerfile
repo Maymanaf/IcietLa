@@ -15,4 +15,4 @@ RUN npm install
 RUN npx @playwright/test install
 RUN npx playwright install --with-deps
 # # # Run Tests
-RUN npx playwright test
+CMD ["npx", "playwright", "test"]
