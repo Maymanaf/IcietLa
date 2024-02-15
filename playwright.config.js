@@ -33,7 +33,6 @@ module.exports = defineConfig({
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://front.icietla.staging.fides.io/',
-    colorScheme: 'dark',
     headless:true,
     screenshot: 'only-on-failure',
     launchOptions: {
