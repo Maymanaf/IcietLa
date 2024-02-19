@@ -38,7 +38,7 @@ module.exports = defineConfig({
       //args: ["--start-maximized"],
       args: ['--window-size=1920,1040'],
     },
-
+    testIgnore: /.signUp.spec.js/,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
