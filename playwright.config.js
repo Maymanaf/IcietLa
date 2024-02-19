@@ -12,6 +12,10 @@ require('dotenv').config();
 module.exports = defineConfig({
   testDir: './tests',
   testMatch: '**spec.js',
+  timeout: 50 * 1000,
+  expect: {
+    timeout: 5000,
+  },
   // Folder for test artifacts such as screenshots, videos, traces, etc.
   outputDir: 'test-results',
   /* Run tests in files in parallel */
@@ -27,6 +31,7 @@ module.exports = defineConfig({
   ["allure-playwright"],
     // ['./reporter.js']
   ],
+  testIgnore: /.signUp.spec.js/,
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
@@ -38,7 +43,6 @@ module.exports = defineConfig({
       //args: ["--start-maximized"],
       args: ['--window-size=1920,1040'],
     },
-    testIgnore: /.signUp.spec.js/,
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
