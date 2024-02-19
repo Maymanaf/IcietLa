@@ -12,6 +12,7 @@ require('dotenv').config();
 module.exports = defineConfig({
   testDir: './tests',
   testMatch: '**spec.js',
+  testIgnore: /.signUp.spec.js/,
   timeout: 50 * 1000,
   expect: {
     timeout: 5000,
@@ -31,7 +32,7 @@ module.exports = defineConfig({
   ["allure-playwright"],
     // ['./reporter.js']
   ],
-  testIgnore: /.signUp.spec.js/,
+ 
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
