@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
+import dotenv from 'dotenv';
 import { ContactPage } from '../pageObject/contactPage';
 import { LoginPage } from '../pageObject/loginPage';
-import dotenv from 'dotenv';
 
 dotenv.config({
     path: 'ressources\\.env.credentials',

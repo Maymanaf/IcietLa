@@ -1,6 +1,6 @@
-import { test, expect } from '@playwright/test';
-import { LoginPage } from '../pageObject/loginPage';
+import { expect, test } from '@playwright/test';
 import dotenv from 'dotenv';
+import { LoginPage } from '../pageObject/loginPage';
 // Load environment variables from .env file
 
 dotenv.config({

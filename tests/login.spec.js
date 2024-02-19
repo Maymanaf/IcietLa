@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
-import { LoginPage } from '../pageObject/loginPage';
 import dotenv from 'dotenv';
+import { LoginPage } from '../pageObject/loginPage';
 // Load environment variables from .env file
 
 dotenv.config({

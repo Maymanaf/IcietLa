@@ -1,5 +1,5 @@
 
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
 
 // Read from default ".env" file.
@@ -32,6 +32,7 @@ module.exports = defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://front.icietla.staging.fides.io/',
     headless: true,
+    video: 'on-first-retry',
     screenshot: 'only-on-failure',
     launchOptions: {
       //args: ["--start-maximized"],

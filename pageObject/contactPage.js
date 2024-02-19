@@ -1,4 +1,3 @@
-import { expect } from '@playwright/test';
 
 exports.ContactPage = class ContactPage {
     /**
