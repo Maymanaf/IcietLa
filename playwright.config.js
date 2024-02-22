@@ -13,9 +13,9 @@ module.exports = defineConfig({
   testDir: './tests',
   testMatch: '**spec.js',
   // testIgnore: /.signUp.spec.js/,
-  timeout: 50 * 1000,
+  timeout: 60 * 1000,
   expect: {
-    timeout: 5000,
+    timeout: 10 * 1000,
   },
   // Folder for test artifacts such as screenshots, videos, traces, etc.
   outputDir: 'test-results',

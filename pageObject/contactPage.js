@@ -27,8 +27,8 @@ exports.ContactPage = class ContactPage {
         this.successContact_message = page.getByRole('heading', { name: 'Votre demande a été envoyée' });
         this.fistnameContact_errorMessage = page.getByText('Ce champ est requis').first();
         this.lastnameContact_errorMessage = page.getByText('Ce champ est requis').nth(1);
-        this.emailContact_errorMessage = page.getByText('L\'email n\'est pas valide');
-        this.phoneContact_errorMessage = page.getByText('Le numéro n\'est pas valide');
+        this.emailContact_errorMessage = page.getByText("L'email n'est pas valide");
+        this.phoneContact_errorMessage = page.getByText("Le numéro n'est pas valide");
         this.contentContact_errorMessage = page.getByText('Cette valeur est trop courte');
         this.consentContact_errorMessage = page.getByText('La case doit être cochée');
 

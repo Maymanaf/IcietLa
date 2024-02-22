@@ -1,8 +1,7 @@
  docker build . --file Dockerfile -t demo
  docker run -it -d --name democontainer demo /bin/bash
- docker exec -it democontainer /bin/bash
- npx playwright test
- exit
  docker cp democontainer:./tests/allure-results C:\Users\Mohamed\Desktop\IcietLa
  npx allure serve allure-results
+ 
+ docker exec -it democontainer /bin/bash
  

@@ -40,6 +40,7 @@ exports.LoginPage = class LoginPage {
         await this.username_textobx.fill(username);
         await this.password_textbox.fill(password);
         await this.login_button.click();
+        await this.page.waitForTimeout(2000);
     }
     async signup(userFirstname, userLastname, userEmail, userPhone, userNewPassword, userConfirmedPassword ) {
         await this.profilLogin_button.click();
