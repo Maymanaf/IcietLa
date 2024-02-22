@@ -24,10 +24,30 @@ test.beforeEach(async ({ page }) => {
 
 });
 
-
 test('Submit postive review', async ({ page }) => {
     await loginPO.login(process.env.USERNAME, process.env.PASSWORD);
     await page.getByRole('link', { name: 'Lire les avis de nos visiteurs' }).first().click();
-    await guestBookPO.postiveReview()
+    await guestBookPO.postiveReview();
     await expect(guestBookPO.successReview_message).toBeVisible();
 });
+
+
+test('Check for review', async ({ page }) => {
+    await page.goto('https://front.icietla.staging.fides.io/review');
+        let sublimissimeVisible = false;
+       await guestBookPO.nextPageGuestBook.click();
+        while (!sublimissimeVisible) {
+            try {
+                await expect(guestBookPO.reviewVisibleTitle).toBeVisible();
+                sublimissimeVisible = true;
+            } catch (error) {
+                // 'Sublimissime' element is not visible yet
+                await page.waitForTimeout(1000); 
+                await guestBookPO.nextPageGuestBook.click();
+        }
+    }
+    await expect(guestBookPO.reviewVisibleMessage).toBeVisible();
+    await expect(guestBookPO.reviewVisibleWriter).toBeVisible();
+});
+
+

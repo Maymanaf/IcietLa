@@ -38,7 +38,7 @@ module.exports = defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: 'https://front.icietla.staging.fides.io/',
     headless: true,
-    video: 'on-first-retry',
+    video: 'retain-on-failure',
     screenshot: 'only-on-failure',
     launchOptions: {
       //args: ["--start-maximized"],
