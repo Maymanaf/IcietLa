@@ -2,8 +2,8 @@ node_modules/
 /test-results/
 /playwright-report/
 /blob-report/
-/allure-results/
 /allure-report/
 /playwright/.cache/
+/allure-results/
 # IDE
 .vscode
