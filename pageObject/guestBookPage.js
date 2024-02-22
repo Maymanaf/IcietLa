@@ -25,6 +25,11 @@ exports.GuestBookPage = class GuestBookPage {
         this.reviewVisibleWriter = page.getByText('Ma récente expérience à la');
         this.reviewShowMore = page.locator("xpath=//h3[normalize-space()='Luxe Tropical']/parent::*/parent::*//a[normalize-space()='Afficher plus']");
         this.reviewDestiniation = page.getByLabel('breadcrumb').getByText('Stellae');
+        this.reviewMsg_ErrorMsg= page.getByText('Cette valeur est trop courte');
+        this.reviewConsent_ErrorMsg = page.getByText('La case doit être cochée');
+        this.reviewNote_ErrorMsg = page.getByText('Veuillez renseigner une note');
+        this.reviewStay_ErrorMsg = page.getByText('Ce champ est requis').first();
+        this.reviewTitle_ErrorMsg = page.getByText('Ce champ est requis').nth(1);
     }
     async postiveReview() {
         await this.review_Button.click();
@@ -32,21 +37,30 @@ exports.GuestBookPage = class GuestBookPage {
         await this.myReviewStay.click();
         await this.reviewTitle_textbox.fill('Sublimissime');
         await this.reviewMessage_textbox.fill("Exactly as advertised: Ce sont mes meilleures vacances.... L'endroit est calme et reposant. La maison est spacieuse, décorée avec goût et hyper équipée. Il ne manque rien!");
-        await this.reviewConsent_checkbox.check();
 
         const fileInput = await this.page.$("input[type='file']");
         if (!fileInput) {
             throw new Error("File input element not found.");
         }
-
-        // Set file input
         const filePath = 'ressources/396111.jpg';
         await fileInput.setInputFiles(filePath);
-
-        // Wait for some time to ensure the file is uploaded (Adjust timing as necessary)
-        // await this.page.waitForTimeout(5000);
-
+        await this.page.waitForTimeout(1000);
+        await this.reviewConsent_checkbox.check();
         await this.excellentReview_icon.click();
         await this.submitReview_button.click();
     }
+
+    async noDataReview() {
+        await this.review_Button.click();
+
+        const fileInput = await this.page.$("input[type='file']");
+        if (!fileInput) {
+            throw new Error("File input element not found.");
+        }
+        const filePath = 'ressources/396111.jpg';
+        await fileInput.setInputFiles(filePath);
+        await this.page.waitForTimeout(1000);
+        await this.submitReview_button.click();
+    }
+    
 }

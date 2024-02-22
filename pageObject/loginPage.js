@@ -29,11 +29,11 @@ exports.LoginPage = class LoginPage {
         this.successSignup_message = page.getByRole('heading', { name: 'Votre compte a été créé avec' });
         this.firstNameError_message = page.getByText('Ce champ est requis').first();
         this.lastNameError_message = page.getByText('Ce champ est requis').nth(1);
-        this.emailError_message = page.getByText('L\'email n\'est pas valide');
-        this.phoneError_message = page.getByText('Le numéro n\'est pas valide');
-        this.newPwdError_message = page.getByText('Le mot de passe n\'est pas').first();
-        this.confirmPwdError_message = page.getByText('Le mot de passe n\'est pas').nth(1);
-        this.notConfirmPwdError_message = page.getByText('N\'est pas égal au mot de passe');
+        this.emailError_message = page.getByText("L'email n'est pas valide");
+        this.phoneError_message = page.getByText("Le numéro n'est pas valide");
+        this.newPwdError_message = page.getByText("Le mot de passe n'est pas").first();
+        this.confirmPwdError_message = page.getByText("Le mot de passe n'est pas").nth(1);
+        this.notConfirmPwdError_message = page.getByText("N'est pas égal au mot de passe");
     }
     async login(username, password) {
         await this.profilLogin_button.click();
