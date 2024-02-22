@@ -32,22 +32,24 @@ test('Submit postive review', async ({ page }) => {
 });
 
 
-test('Check for review', async ({ page }) => {
+test('Check review', async ({ page }) => {
     await page.goto('https://front.icietla.staging.fides.io/review');
-        let sublimissimeVisible = false;
-       await guestBookPO.nextPageGuestBook.click();
-        while (!sublimissimeVisible) {
-            try {
-                await expect(guestBookPO.reviewVisibleTitle).toBeVisible();
-                sublimissimeVisible = true;
-            } catch (error) {
-                // 'Sublimissime' element is not visible yet
-                await page.waitForTimeout(1000); 
-                await guestBookPO.nextPageGuestBook.click();
+    let sublimissimeVisible = false;
+    await guestBookPO.nextPageGuestBook.click();
+    while (!sublimissimeVisible) {
+        try {
+            await expect(guestBookPO.reviewVisibleTitle).toBeVisible();
+            sublimissimeVisible = true;
+        } catch (error) {
+            // 'Sublimissime' element is not visible yet
+            await page.waitForTimeout(1000);
+            await guestBookPO.nextPageGuestBook.click();
         }
     }
     await expect(guestBookPO.reviewVisibleMessage).toBeVisible();
     await expect(guestBookPO.reviewVisibleWriter).toBeVisible();
+    await guestBookPO.reviewShowMore.click();
+    await expect(guestBookPO.reviewDestiniation).toBeVisible();
 });
 
 

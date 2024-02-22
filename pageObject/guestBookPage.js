@@ -23,6 +23,8 @@ exports.GuestBookPage = class GuestBookPage {
         this.reviewVisibleTitle = page.getByRole('heading', { name: 'Luxe Tropical' });
         this.reviewVisibleMessage = page.getByText('Paul Pogba');
         this.reviewVisibleWriter = page.getByText('Ma récente expérience à la');
+        this.reviewShowMore = page.locator("xpath=//h3[normalize-space()='Luxe Tropical']/parent::*/parent::*//a[normalize-space()='Afficher plus']");
+        this.reviewDestiniation = page.getByLabel('breadcrumb').getByText('Stellae');
     }
     async postiveReview() {
         await this.review_Button.click();
