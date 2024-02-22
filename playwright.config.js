@@ -13,14 +13,14 @@ module.exports = defineConfig({
   testDir: './tests',
   testMatch: '**spec.js',
   // testIgnore: /.signUp.spec.js/,
-  timeout: 60 * 1000,
+  timeout: 50 * 1000,
   expect: {
-    timeout: 10 * 1000,
+    timeout: 5000,
   },
   // Folder for test artifacts such as screenshots, videos, traces, etc.
   outputDir: 'test-results',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   workers: '50%',
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
