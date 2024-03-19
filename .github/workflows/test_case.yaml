@@ -1,0 +1,81 @@
+name: "🧪 Test Case Template"
+description: Define a structured test case for evaluating specific functionality
+labels: kind:test-case
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for creating this structured test case.
+        Please ensure the following before submitting:
+          - The test case is unique and necessary.
+          - All fields are filled out with clear and concise information.
+
+  - type: input
+    id: title
+    attributes:
+      label: Test Case Title
+      description: |
+        Provide a short and descriptive title for the test case.
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Test Case Description
+      description: |
+        Detail the purpose and the general scenario of the test case.
+    validations:
+      required: true
+
+  - type: input
+    id: createdBy
+    attributes:
+      label: Created By
+      description: |
+        Enter the name of the person or team responsible for creating this test case.
+    validations:
+      required: true
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: |
+        List any conditions that must be met before the test can be executed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Test Environment
+      description: |
+        Describe the environment in which the test should be executed, including hardware, operating system, network configuration, etc.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "### Test Steps and Expected Results"
+      description: |
+        List each step required to perform the test along with the expected result of each step.
+
+  - type: textarea
+    id: testSteps
+    attributes:
+      label: Test Steps and Expected Results
+      description: |
+        Use the following format:
+        - Case Number:
+          - Step:
+          - Expected Result:
+      placeholder: |
+        - Case Number: 1
+          - Step: Navigate to the login page
+          - Expected Result: The login page is displayed.
+        - Case Number: 2
+          - Step: Enter valid user credentials and click 'Login'
+          - Expected Result: The user is logged in and directed to the homepage.
+    validations:
+      required: true
