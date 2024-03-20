@@ -7,57 +7,65 @@ assignees: ''
 
 ---
 
-# Test Case: [Title of the Test Case]
+# Test Case Template
 
-## Test Case ID
-> TC-[Unique ID]
+**Instructions:**  
+Complete this test case form thoroughly. Required fields must be filled out to ensure the test case is valid. Refer to any associated user stories or documentation as needed. Ensure all preconditions are met before executing the test steps.
+
+---
+
+## Test Case Title
+**Title**: [Provide a brief, descriptive title for the test case.]
+
+---
 
 ## Description
-> [Brief description of what this test case is intended to verify. Include what part of the application it is testing and why it's important.]
+**Objective**:  
+[Provide a detailed description of the test case. Include the objective, test scenario, and any relevant user story IDs or bug IDs.]
 
-
-## Priority
-> [Priority level (e.g., High, Medium, Low)]
+---
 
 ## Preconditions
-> [List any conditions that must be true or any setup that must be done before executing this test case.]
+**Preconditions**:  
+[List any conditions that need to be met before the test can be executed.]
 
-## Dependencies
-> [List any test cases that need to be executed prior to this one.]
+---
 
-## Test Data
-> [Specify the data values needed for testing, if applicable.]
+## Test Steps
+**Procedure**:  
+1. Navigate to '...'
+2. Enter data in '...'
+3. Click on '...'
+4. Verify that '...'
 
-## Steps to Execute
-1. **Step 1:** [Description of the first step]
-   - **Expected Result:** [What you expect to happen after this step]
-
-2. **Step 2:** [Description of the second step]
-   - **Expected Result:** [What you expect to happen after this step]
-
-3. **Step N:** [Description of the Nth step]
-   - **Expected Result:** [What you expect to happen after this step]
+---
 
 ## Expected Results
-> [Summarize what outcomes you should see if the test passes.]
+**Expected Outcomes**:  
+1. The system displays '...'
+2. The database updates with '...'
+3. The user receives a confirmation of '...'
+
+---
 
 ## Actual Results
-> [Record what actually happened when you performed the test. This section is typically filled out during the testing phase.]
+**Observed Outcomes**:  
+[Document the actual results after the test case execution. Note any deviations from the expected results.]
 
-## Status
-> **[Not Executed / Passed / Failed / Blocked]**
+---
 
-## Notes
-> [Any additional information that testers need to know, such as special configurations, environment-specific instructions, etc.]
+## Test Case Status
+**Status**:  
+[Select the current status of the test case - Not Executed, Passed, Failed, Blocked]
 
-## Tester
-> [Name of the person who wrote or executed the test]
+---
 
-## Date Tested
-> [Date when the test was executed]
+## Tester Information
+**Tester Name**: [Enter the name of the person who executed the test.]  
+**Date Executed**: [Enter the date when the test was executed, format: YYYY-MM-DD]
 
-## Environment
-> [Details about the environment where the test was executed: hardware, software, OS, browser, etc.]
+---
 
-## References
-> [Links to the related documents, tickets, user stories, etc.]
+## Additional Notes
+**Notes**:  
+[Any additional information, observations, or issues encountered during testing. Include screenshots or error logs if available.]
