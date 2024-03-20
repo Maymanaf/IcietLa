@@ -18,9 +18,6 @@ assignees: ''
 ## Preconditions
 > [List any conditions that must be true or any setup that must be done before executing this test case.]
 
-## Dependencies
-> [List any test cases that need to be executed prior to this one.]
-
 ## Test Data
 > [Specify the data values needed for testing, if applicable.]
 
@@ -40,17 +37,8 @@ assignees: ''
 ## Actual Results
 > [Record what actually happened when you performed the test. This section is typically filled out during the testing phase.]
 
-## Status
-> **[Not Executed / Passed / Failed / Blocked]**
-
 ## Notes
 > [Any additional information that testers need to know, such as special configurations, environment-specific instructions, etc.]
-
-## Tester
-> [Name of the person who wrote or executed the test]
-
-## Date Tested
-> [Date when the test was executed]
 
 ## Environment
 > [Details about the environment where the test was executed: hardware, software, OS, browser, etc.]
