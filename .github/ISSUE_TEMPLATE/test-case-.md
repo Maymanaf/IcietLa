@@ -12,9 +12,6 @@ assignees: ''
 ## Description
 > [Brief description of what this test case is intended to verify. Include what part of the application it is testing and why it's important.]
 
-## Priority
-> [Priority level (e.g., High, Medium, Low)]
-
 ## Preconditions
 > [List any conditions that must be true or any setup that must be done before executing this test case.]
 
@@ -31,17 +28,11 @@ assignees: ''
 3. **Step N:** [Description of the Nth step]
    - **Expected Result:** [What you expect to happen after this step]
 
-## Expected Results
-> [Summarize what outcomes you should see if the test passes.]
-
-## Actual Results
-> [Record what actually happened when you performed the test. This section is typically filled out during the testing phase.]
-
 ## Notes
 > [Any additional information that testers need to know, such as special configurations, environment-specific instructions, etc.]
 
 ## Environment
-> [Details about the environment where the test was executed: hardware, software, OS, browser, etc.]
+> [Details about the environment where the test was executed: OS, browser, etc.]
 
 ## References
 > [Links to the related documents, tickets, user stories, etc.]
