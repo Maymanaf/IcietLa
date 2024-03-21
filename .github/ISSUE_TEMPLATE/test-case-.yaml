@@ -72,7 +72,7 @@ body:
     id: environment
     attributes:
       label: Environment
-      description: Details about the environment where the test was executed: OS, browser, etc.
+      description: Details about the environment where the test was executed(S, browser, etc.)
       placeholder: |
         - **Browser**: Chrome v90
         - **OS**: Windows 10
