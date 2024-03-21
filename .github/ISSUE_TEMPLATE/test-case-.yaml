@@ -14,7 +14,7 @@ body:
       label: Description
       description: |
         Brief description of what this test case is intended to verify. Include what part of the application it is testing.
-         placeholder: "e.g., Ce cas de test vérifie la création d'une étude."
+      placeholder: "e.g., Ce cas de test vérifie la création d'une étude."
     validations:
       required: true
 
@@ -43,22 +43,22 @@ body:
       label: Steps and Expected Results
       description: Please describe all the steps of the test case and their expected results. Use numbering for each step and clearly specify the expected outcome for each.
       placeholder: |
-     1. **Step:** Naviguer vers la section spécifiée de l'application.
-   **Expected Result:** La page ou section appropriée se charge avec succès.
+        1. **Step:** Naviguer vers la section spécifiée de l'application.
+           **Expected Result:** La page ou section appropriée se charge avec succès.
 
-2. **Step:** Effectuer une action spécifique (par exemple, cliquer sur un bouton, entrer des informations dans un champ de formulaire).
-   **Expected Result:** L'action entraîne un changement ou une mise à jour spécifique, tel qu'un nouveau formulaire apparaissant ou un message de confirmation s'affichant.
+        2. **Step:** Effectuer une action spécifique (par exemple, cliquer sur un bouton, entrer des informations dans un champ de formulaire).
+           **Expected Result:** L'action entraîne un changement ou une mise à jour spécifique, tel qu'un nouveau formulaire apparaissant ou un message de confirmation s'affichant.
 
-3. **Step:** Entrer ou sélectionner les informations requises (décrire quel type d'information ou où la sélectionner).
-   **Expected Result:** Les informations entrées ou sélectionnées sont correctement affichées ou acceptées par l'application.
+        3. **Step:** Entrer ou sélectionner les informations requises (décrire quel type d'information ou où la sélectionner).
+           **Expected Result:** Les informations entrées ou sélectionnées sont correctement affichées ou acceptées par l'application.
 
-4. **Step:** Soumettre ou sauvegarder les modifications (préciser la méthode ou le bouton utilisé).
-   **Expected Result:** Les données sont enregistrées ou soumises comme prévu, et l'utilisateur est dirigé vers la page suivante correcte ou un message de succès est affiché.
+        4. **Step:** Soumettre ou sauvegarder les modifications (préciser la méthode ou le bouton utilisé).
+           **Expected Result:** Les données sont enregistrées ou soumises comme prévu, et l'utilisateur est dirigé vers la page suivante correcte ou un message de succès est affiché.
 
-5. **Step:** Vérifier le résultat (décrire ce qui devrait être vérifié pour s'assurer que l'étape a été réussie).
-   **Expected Result:** Les changements attendus sont visibles et aucune erreur n'est présentée.
+        5. **Step:** Vérifier le résultat (décrire ce qui devrait être vérifié pour s'assurer que l'étape a été réussie).
+           **Expected Result:** Les changements attendus sont visibles et aucune erreur n'est présentée.
 
-Remplacez ces exemples par les étapes spécifiques et les résultats attendus pertinents pour votre cas de test.
+        Remplacez ces exemples par les étapes spécifiques et les résultats attendus pertinents pour votre cas de test.
     validations:
       required: true
 
@@ -68,7 +68,7 @@ Remplacez ces exemples par les étapes spécifiques et les résultats attendus p
       label: Notes
       description: |
         Any additional information that testers need to know, such as special configurations, environment-specific instructions, etc.
-         placeholder: "ex., Assurez-vous d'effacer les cookies avant de commencer le test."
+      placeholder: "ex., Assurez-vous d'effacer les cookies avant de commencer le test."
     validations:
       required: false
 
