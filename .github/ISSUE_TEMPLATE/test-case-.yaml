@@ -40,14 +40,24 @@ body:
     id: steps_and_results
     attributes:
       label: Steps and Expected Results
-      description: Describe all the steps of the test case and their expected results. Use numbering for each step and specify the expected outcome.
+      description: Please describe all the steps of the test case and their expected results. Use numbering for each step and clearly specify the expected outcome for each.
       placeholder: |
-        1. Step: Go to 'Études d'exploitation'.
-           Expected Result: The operational studies page is displayed.
-        2. Step: Perform the next action.
-           Expected Result: Describe the expected result after performing the action.
-        3. Step: Add more steps as needed.
-           Expected Result: Describe the expected result for each step.
+        1. **Step:** Navigate to the specified section of the application.  
+           **Expected Result:** The appropriate page or section loads successfully.
+
+        2. **Step:** Perform a specific action (e.g., clicking a button, entering information into a form field).  
+           **Expected Result:** The action results in a specific change or update, such as a new form appearing or a confirmation message being displayed.
+
+        3. **Step:** Input or select required information (describe what kind of information or where to select it).  
+           **Expected Result:** The inputted or selected information is correctly displayed or accepted by the application.
+
+        4. **Step:** Submit or save changes (specify the method or button used).  
+           **Expected Result:** Data is saved or submitted as expected, and the user is directed to the correct subsequent page or shown a success message.
+
+        5. **Step:** Verify the outcome (describe what should be checked to ensure the step was successful).  
+           **Expected Result:** The expected changes are visible, and no errors are presented.
+
+        Replace these examples with the specific steps and expected outcomes relevant to your test case.
     validations:
       required: true
 
@@ -57,18 +67,6 @@ body:
       label: Notes
       description: |
         Any additional information that testers need to know, such as special configurations, environment-specific instructions, etc.
-    validations:
-      required: false
-
-  - type: textarea
-    id: environment
-    attributes:
-      label: Environment
-      description: Details about the environment where the test was executed (OS, browser, etc.)
-      placeholder: |
-        - **Browser**: Chrome v90
-        - **OS**: Windows 10
-        - **Environment**: Staging
     validations:
       required: false
 
