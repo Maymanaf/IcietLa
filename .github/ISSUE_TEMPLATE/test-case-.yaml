@@ -1,6 +1,7 @@
 name: "📝 Test Case Template"
 description: Detail the steps necessary to perform a specific test case within the OSRD application.
-labels: kind:test-case
+labels: 
+  - kind:test-case
 body:
   - type: markdown
     attributes:
@@ -41,7 +42,8 @@ body:
     id: steps_and_results
     attributes:
       label: Steps and Expected Results
-      description: Please describe all the steps of the test case and their expected results. Use numbering for each step and clearly specify the expected outcome for each.
+      description: |
+        Please describe all the steps of the test case and their expected results. Use numbering for each step and clearly specify the expected outcome for each.
       placeholder: |
         1. **Step:** Naviguer vers la section spécifiée de l'application.
            **Expected Result:** La page ou section appropriée se charge avec succès.
