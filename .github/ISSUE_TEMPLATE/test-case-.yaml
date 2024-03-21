@@ -1,0 +1,90 @@
+name: "📝 Test Case Template"
+description: Detail the steps necessary to perform a specific test case within the application.
+labels: kind:test-case
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this test case template!
+        Please provide detailed steps and expected outcomes to help ensure thorough testing.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: |
+        Brief description of what this test case is intended to verify. Include what part of the application it is testing and why it's important.
+    validations:
+      required: true
+
+  - type: textarea
+    id: preconditions
+    attributes:
+      label: Preconditions
+      description: |
+        List any conditions or setup that must be done before executing this test case.
+      placeholder: "e.g., User must be logged in."
+    validations:
+      required: false
+
+  - type: textarea
+    id: test_data
+    attributes:
+      label: Test Data
+      description: Specify the data values needed for executing this test.
+      placeholder: "e.g., Matériel roulant: TGV"
+    validations:
+      required: false
+
+  - type: textarea
+    id: step_1
+    attributes:
+      label: Step 1
+      description: Describe the first step of the test case.
+      placeholder: "e.g., Go to '...'"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_result_1
+    attributes:
+      label: Expected Result for Step 1
+      description: What do you expect to happen after completing Step 1?
+      placeholder: "e.g., The operational studies page is displayed."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "Add more steps and expected results as needed by duplicating the previous steps. You can number them accordingly (Step 2, Step 3, etc.)."
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: |
+        Any additional information that testers need to know, such as special configurations, environment-specific instructions, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Details about the environment where the test was executed: OS, browser, etc.
+      placeholder: |
+        - **Browser**: Chrome v90
+        - **OS**: Windows 10
+        - **Environment**: Staging
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References (Required)
+      description: |
+        Links to the related documents, tickets, user stories, etc.
+      placeholder: "e.g., User Story #123"
+    validations:
+      required: true
