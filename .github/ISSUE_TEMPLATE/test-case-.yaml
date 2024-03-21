@@ -1,6 +1,6 @@
 name: "📝 Test Case Template"
 description: Detail the steps necessary to perform a specific test case within the OSRD application.
-title: "New Test Case: [Please replace with specific test case name]"  # Default title for the issue
+title: "[TEST]
 labels: 
   - kind:test-case
 body:
