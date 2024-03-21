@@ -36,21 +36,20 @@ body:
     validations:
       required: false
 
-- type: textarea
-  id: steps_and_results
-  attributes:
-    label: Steps and Expected Results
-    description: Describe all the steps of the test case and their expected results. Use numbering for each step and specify the expected outcome.
-    placeholder: |
-      1. Step: Go to 'Études d'exploitation'.
-         Expected Result: The operational studies page is displayed.
-      2. Step: Perform the next action.
-         Expected Result: Describe the expected result after performing the action.
-      3. Step: Add more steps as needed.
-         Expected Result: Describe the expected result for each step.
-  validations:
-    required: true
-
+  - type: textarea
+    id: steps_and_results
+    attributes:
+      label: Steps and Expected Results
+      description: Describe all the steps of the test case and their expected results. Use numbering for each step and specify the expected outcome.
+      placeholder: |
+        1. Step: Go to 'Études d'exploitation'.
+           Expected Result: The operational studies page is displayed.
+        2. Step: Perform the next action.
+           Expected Result: Describe the expected result after performing the action.
+        3. Step: Add more steps as needed.
+           Expected Result: Describe the expected result for each step.
+    validations:
+      required: true
 
   - type: textarea
     id: notes
