@@ -56,7 +56,8 @@ body:
 
   - type: markdown
     attributes:
-      value: "Add more steps and expected results as needed by duplicating the previous steps. You can number them accordingly (Step 2, Step 3, etc.)."
+      value: |
+        Add more steps and expected results as needed by duplicating the previous steps. You can number them accordingly (Step 2, Step 3, etc.).
 
   - type: textarea
     id: notes
