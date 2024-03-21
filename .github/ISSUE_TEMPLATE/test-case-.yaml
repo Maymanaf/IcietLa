@@ -1,5 +1,5 @@
 name: "📝 Test Case Template"
-description: Detail the steps necessary to perform a specific test case within the application.
+description: Detail the steps necessary to perform a specific test case within OSRD application.
 labels: kind:test-case
 body:
   - type: markdown
@@ -13,7 +13,7 @@ body:
     attributes:
       label: Description
       description: |
-        Brief description of what this test case is intended to verify. Include what part of the application it is testing and why it's important.
+        Brief description of what this test case is intended to verify. Include what part of the application it is testing.
     validations:
       required: true
 
@@ -23,7 +23,7 @@ body:
       label: Preconditions
       description: |
         List any conditions or setup that must be done before executing this test case.
-      placeholder: "e.g., User must be logged in."
+      placeholder: "e.g., Les points remarquables sont bien importés "
     validations:
       required: false
 
@@ -41,7 +41,7 @@ body:
     attributes:
       label: Step 1
       description: Describe the first step of the test case.
-      placeholder: "e.g., Go to '...'"
+      placeholder: "e.g., Go to 'Études d'exploitation'"
     validations:
       required: true
 
@@ -83,7 +83,7 @@ body:
   - type: textarea
     id: references
     attributes:
-      label: References (Required)
+      label: References
       description: |
         Links to the related documents, tickets, user stories, etc.
       placeholder: "e.g., User Story #123"
