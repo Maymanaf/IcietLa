@@ -44,15 +44,23 @@ body:
     attributes:
       label: Steps and Expected Results
       description: |
-        Please describe all the steps of the test case and their expected results in the table format provided below. Use numbering for each step and clearly specify the expected outcome for each.
+        Please enter the steps for the test case and their expected results using the markdown table format below. Number each step and clearly specify the expected outcome for each step in the corresponding row. This format helps in organizing the information clearly and makes it more readable for everyone.
+        
+        **Markdown Table Guide:**
+        Use `|` to separate columns and `-` to create headers. An example is provided below.
+        
+        ```
+        | Step | Expected Result |
+        |------|-----------------|
+        | Step detail here | Expected outcome here |
+        ```
+        
+        Please replace the placeholder content with the specific steps and expected results for your test case.
       placeholder: |
         | Step | Expected Result |
         |------|-----------------|
-        | Naviguer vers la section spécifiée de l'application. | La page ou section appropriée se charge avec succès. |
-        | Effectuer une action spécifique (par exemple, cliquer sur un bouton, entrer des informations dans un champ de formulaire). | L'action entraîne un changement ou une mise à jour spécifique, tel qu'un nouveau formulaire apparaissant ou un message de confirmation s'affichant. |
-        | Entrer ou sélectionner les informations requises (décrire quel type d'information ou où la sélectionner). | Les informations entrées ou sélectionnées sont correctement affichées ou acceptées par l'application. |
-        | Soumettre ou sauvegarder les modifications (préciser la méthode ou le bouton utilisé). | Les données sont enregistrées ou soumises comme prévu, et l'utilisateur est dirigé vers la page suivante correcte ou un message de succès est affiché. |
-        | Vérifier le résultat (décrire ce qui devrait être vérifié pour s'assurer que l'étape a été réussie). | Les changements attendus sont visibles et aucune erreur n'est présentée. |
+        | Example: Navigate to the specified section of the application. | The appropriate page or section loads successfully. |
+        | Add more rows as needed for each step and its expected result. | Corresponding expected outcome for the step. |
     validations:
       required: true
 
