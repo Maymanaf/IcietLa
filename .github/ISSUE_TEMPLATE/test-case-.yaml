@@ -7,15 +7,15 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this test case template!
-        Please provide detailed steps and expected outcomes to help ensure thorough testing.
+  Merci de prendre le temps de remplir ce modèle de cas de test ! 
+  Veuillez fournir des étapes détaillées et les résultats attendus pour garantir un test approfondi.
 
   - type: textarea
     id: description
     attributes:
       label: Description
       description: |
-        Brief description of what this test case is intended to verify. Include what part of the application it is testing.
+        Brève description de ce que ce cas de test est censé vérifier.
       placeholder: "e.g., Ce cas de test vérifie la création d'une étude."
     validations:
       required: true
@@ -23,9 +23,9 @@ body:
   - type: textarea
     id: preconditions
     attributes:
-      label: Preconditions
+      label: Préconditions
       description: |
-        List any conditions or setup that must be done before executing this test case.
+        Lister toutes les conditions ou configurations qui doivent être réalisées avant d'exécuter ce cas de test.
       placeholder: "e.g., Les points remarquables sont bien importés."
     validations:
       required: false
@@ -33,8 +33,8 @@ body:
   - type: textarea
     id: test_data
     attributes:
-      label: Test Data
-      description: Specify the data values needed for executing this test.
+      label: Données de test
+      description: Spécifier les valeurs de données nécessaires pour exécuter ce test..
       placeholder: "e.g., Matériel roulant: TGV"
     validations:
       required: false
@@ -42,25 +42,27 @@ body:
   - type: textarea
     id: steps_and_results
     attributes:
-      label: Steps and Expected Results
+      label: Étapes et résultats attendus
       description: |
-        Please enter the steps for the test case and their expected results using the markdown table format below. Number each step and clearly specify the expected outcome for each step in the corresponding row. This format helps in organizing the information clearly and makes it more readable for everyone.
+       Veuiller entrer les étapes du cas de test et leurs résultats attendus en utilisant le format de tableau Markdown ci-dessous. Numérotez chaque étape et spécifiez clairement le résultat attendu pour chaque étape dans la ligne correspondante. Ce format aide à organiser les informations clairement et les rend plus lisibles pour tous.
         
         **Markdown Table Guide:**
-        Use `|` to separate columns and `-` to create headers. An example is provided below.
+        Utilisez | pour séparer les colonnes et - pour créer les en-têtes. Un exemple est fourni ci-dessous.
         
         ```
-        | Step | Expected Result |
-        |------|-----------------|
-        | Step detail here | Expected outcome here |
+        | Étape | Résultat attendu |
+        |------|-------------------|
+        | Détail de l'étape ici | Résultat attendu ici |
+
         ```
         
-        Please replace the placeholder content with the specific steps and expected results for your test case.
+        Veuillez remplacer le contenu de l'espace réservé par les étapes spécifiques et les résultats attendus pour votre cas de test.
       placeholder: |
-        | Step | Expected Result |
-        |------|-----------------|
-        | Example: Navigate to the specified section of the application. | The appropriate page or section loads successfully. |
-        | Add more rows as needed for each step and its expected result. | Corresponding expected outcome for the step. |
+        | Étape | Résultat attendu |
+        |------|-------------------|
+        | Exemple : Naviguer vers la section spécifiée de l'application. | La page ou section appropriée se charge avec succès. |
+        | Ajouter plus de lignes selon les besoins pour chaque étape et son résultat attendu. | Résultat attendu correspondant à l'étape. |
+
     validations:
       required: true
 
@@ -69,17 +71,7 @@ body:
     attributes:
       label: Notes
       description: |
-        Any additional information that testers need to know, such as special configurations, environment-specific instructions, etc.
-      placeholder: "ex., Assurez-vous d'effacer les cookies avant de commencer le test."
+        Toute information supplémentaire que les testeurs doivent connaître, telle que des configurations spéciales, des instructions spécifiques à l'environnement, etc.
+      placeholder: "ex., Ce test ne peut être lancé que sur l'environnement de recette "
     validations:
       required: false
-
-  - type: textarea
-    id: references
-    attributes:
-      label: References
-      description: |
-        Links to the related documents, tickets, user stories, etc.
-      placeholder: "e.g., User Story #123"
-    validations:
-      required: true
