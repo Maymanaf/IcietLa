@@ -7,7 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-  Merci de prendre le temps de remplir ce modèle de cas de test ! 
+  Merci de prendre le temps de remplir ce modèle de cas de test! 
   Veuillez fournir des étapes détaillées et les résultats attendus pour garantir un test approfondi.
 
   - type: textarea
