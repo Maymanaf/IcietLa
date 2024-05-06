@@ -1,6 +1,5 @@
 name: "📝 Test Case Template"
 description: "Détaillez les étapes nécessaires pour effectuer un cas de test spécifique dans l'application OSRD."
-title: ''
 labels:
   - kind:test-case
 
