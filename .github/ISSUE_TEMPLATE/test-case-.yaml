@@ -32,6 +32,7 @@ body:
   - type: textarea
     id: test_data
     attributes:
+    valeur_par_defaut:"Pas de données."
       label: "Données de test"
       description: |
         "Spécifiez les valeurs de données nécessaires pour exécuter ce test."
