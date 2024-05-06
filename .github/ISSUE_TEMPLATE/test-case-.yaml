@@ -66,4 +66,6 @@ body:
       label: "Notes"
       description: |
         "Toute information supplémentaire que les testeurs doivent connaître, telle que des configurations spéciales, des instructions spécifiques à l'environnement, etc."
-      placeholder: "Par exemple, ce test ne peut
+      placeholder: "Par exemple, ce test ne peut être lancé que sur l'environnement de recette."
+    validations:
+      required: false
