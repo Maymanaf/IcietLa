@@ -40,29 +40,26 @@ body:
     validations:
       required: false
 
-  - type: textarea
-    id: steps_and_results
-    attributes:
-      label: "Étapes et résultats attendus"
-      description: |
-        "Veuillez entrer les étapes du cas de test et leurs résultats attendus en utilisant le format de tableau Markdown ci-dessous. Numérotez chaque étape et spécifiez clairement le résultat attendu pour chaque étape dans la ligne correspondante. Ce format aide à organiser les informations clairement et les rend plus lisibles pour tous.
-        
-        **Guide de tableau Markdown:** Utilisez | pour séparer les colonnes et - pour créer les en-têtes. Un exemple est fourni ci-dessous.
-        
-        ```
-        | Étape | Résultat attendu |
-        |-------|-------------------|
-        | Détail de l'étape ici | Résultat attendu ici |
-        ```
+- type: textarea
+  id: steps_and_results
+  attributes:
+    label: "Étapes et résultats attendus"
+    description: |
+      "Veuillez entrer les étapes du cas de test et leurs résultats attendus en utilisant le format de tableau Markdown ci-dessous. Numérotez chaque étape et spécifiez clairement le résultat attendu pour chaque étape dans la ligne correspondante. Ce format aide à organiser les informations clairement et les rend plus lisibles pour tous.
 
-        Veuillez remplacer le contenu de l'espace réservé par les étapes spécifiques et les résultats attendus pour votre cas de test."
-      placeholder: |
-        | Étape | Résultat attendu |
-        |-------|-------------------|
-        | Exemple : Naviguer vers la section spécifiée de l'application. | La page ou section appropriée se charge avec succès. |
-        | Ajouter plus de lignes selon les besoins pour chaque étape et son résultat attendu. | Résultat attendu correspondant à l'étape. |
-    validations:
-      required: true
+      **Guide de tableau Markdown:** Utilisez `|` pour séparer les colonnes et `-` pour créer les en-têtes. Un exemple est fourni ci-dessous.
+      
+      | Étape | Résultat attendu |
+      |-------|-------------------|
+      | Détail de l'étape ici | Résultat attendu ici |"
+
+    placeholder: |
+      | Étape | Résultat attendu |
+      |-------|-------------------|
+      | Exemple : Naviguer vers la section spécifiée de l'application. | La page ou section appropriée se charge avec succès. |
+      | Ajouter plus de lignes selon les besoins pour chaque étape et son résultat attendu. | Résultat attendu correspondant à l'étape. |
+  validations:
+    required: true
 
   - type: textarea
     id: notes
