@@ -6,8 +6,7 @@ exports.GuestBookPage = class GuestBookPage {
      */
 
     constructor(page) {
-
-
+//test firt commit
         this.page = page;
         this.review_Button = page.getByRole('button', { name: 'Laisser une note' });
         this.reviewStay = page.getByLabel('Séjour');
