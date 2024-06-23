@@ -6,7 +6,7 @@ exports.GuestBookPage = class GuestBookPage {
      */
 
     constructor(page) {
-//test firt commit
+//test firt commit test
         this.page = page;
         this.review_Button = page.getByRole('button', { name: 'Laisser une note' });
         this.reviewStay = page.getByLabel('Séjour');
@@ -17,18 +17,7 @@ exports.GuestBookPage = class GuestBookPage {
         this.reviewPicture_button = page.getByText('Ajoutez une photo de votre sé');
         this.excellentReview_icon = page.locator('xpath=//label[5]//div[1]');
         this.submitReview_button = page.getByRole('button', { name: 'Envoyer' });
-        this.successReview_message = page.getByRole('heading', { name: 'Votre note a été envoyée' });
-        this.nextPageGuestBook = page.getByRole('button', { name: 'next' });
-        this.reviewVisibleTitle = page.getByRole('heading', { name: 'Luxe Tropical' });
-        this.reviewVisibleMessage = page.getByText('Paul Pogba');
-        this.reviewVisibleWriter = page.getByText('Ma récente expérience à la');
-        this.reviewShowMore = page.locator("xpath=//h3[normalize-space()='Luxe Tropical']/parent::*/parent::*//a[normalize-space()='Afficher plus']");
-        this.reviewDestiniation = page.getByLabel('breadcrumb').getByText('Stellae');
-        this.reviewMsg_ErrorMsg= page.getByText('Cette valeur est trop courte');
-        this.reviewConsent_ErrorMsg = page.getByText('La case doit être cochée');
-        this.reviewNote_ErrorMsg = page.getByText('Veuillez renseigner une note');
-        this.reviewStay_ErrorMsg = page.getByText('Ce champ est requis').first();
-        this.reviewTitle_ErrorMsg = page.getByText('Ce champ est requis').nth(1);
+
     }
     async postiveReview() {
         await this.review_Button.click();
