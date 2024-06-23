@@ -20,6 +20,7 @@ exports.ContactPage = class ContactPage {
         this.contactDestination = page.getByText('Caraïbes - Saint Barthélemy - Pas de région - Pas de ville - Anse des Cayes');
         this.contactSubject_listbox = page.getByRole('button', { name: 'Votre demande concerne' });
         this.contactSubject = page.getByText('Comment faire si je ne reçois');
+        //test
         this.contactMessage_textbox = page.getByLabel('Votre message');
         this.contactConsent_checkbox = page.getByLabel('J’ai pris connaissance de la');
         this.contactNewsletter_checkbox = page.getByLabel('J’accepte de recevoir des');
